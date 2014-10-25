@@ -11,7 +11,7 @@ gem 'jquery-rails'
 group :development do
   gem 'pry'
   gem 'pry-rails'
-  gem 'rack-mini-profiler'
+  gem 'rack-mini-profiler', require: false
   gem 'spring'
 end
 

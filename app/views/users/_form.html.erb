@@ -1,0 +1,57 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employee_number %><br>
+    <%= f.text_field :employee_number %>
+  </div>
+  <div class="field">
+    <%= f.label :company_email %><br>
+    <%= f.text_field :company_email %>
+  </div>
+  <div class="field">
+    <%= f.label :private_email %><br>
+    <%= f.text_field :private_email %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :name_kana %><br>
+    <%= f.text_field :name_kana %>
+  </div>
+  <div class="field">
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nickname %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter_id %><br>
+    <%= f.text_field :twitter_id %>
+  </div>
+  <div class="field">
+    <%= f.label :github_id %><br>
+    <%= f.text_field :github_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ghe_id %><br>
+    <%= f.text_field :ghe_id %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

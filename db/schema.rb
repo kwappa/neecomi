@@ -14,21 +14,24 @@
 ActiveRecord::Schema.define(version: 20141025184452) do
 
   create_table "users", force: true do |t|
-    t.string   "employee_number", null: false
-    t.string   "company_email",   null: false
-    t.string   "private_email"
-    t.string   "name",            null: false
-    t.string   "name_kana"
-    t.string   "nickname",        null: false
+    t.string   "name",               null: false
+    t.string   "email",              null: false
+    t.string   "password_digest",    null: false
+    t.string   "employee_number"
+    t.string   "screen_name"
+    t.string   "screen_name_kana"
+    t.string   "chat_id"
     t.string   "twitter_id"
     t.string   "github_id"
-    t.string   "ghe_id",          null: false
+    t.string   "ghe_id"
     t.string   "phone_number"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "email_confirmed_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
-  add_index "users", ["company_email"], name: "index_users_on_company_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["employee_number"], name: "index_users_on_employee_number", unique: true
+  add_index "users", ["name"], name: "index_users_on_name", unique: true
 
 end

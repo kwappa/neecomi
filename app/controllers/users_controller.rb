@@ -23,6 +23,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
+    # FIXME
+    @user.password_digest = 'dummy'
+
     if @user.save
       redirect_to @user, notice: 'User was successfully created.'
     else
@@ -46,13 +49,25 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def user_params
-      params.require(:user).permit(:employee_number, :company_email, :private_email, :name, :name_kana, :nickname, :twitter_id, :github_id, :ghe_id, :phone_number)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def user_params
+    params.require(:user).permit(
+      :name,
+      :email,
+      :employee_number,
+      :screen_name,
+      :screen_name_kana,
+      :chat_id,
+      :twitter_id,
+      :github_id,
+      :ghe_id,
+      :phone_number,
+      :email_confirmed_at
+    )
+  end
 end

@@ -3,12 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>Employee number</th>
-      <th>Company email</th>
-      <th>Private email</th>
       <th>Name</th>
-      <th>Name kana</th>
-      <th>Nickname</th>
+      <th>Email</th>
+      <th>Emlployee Number</th>
+      <th>Screen Name</th>
+      <th>Screen Name kana</th>
+      <th>Chat</th>
       <th>Twitter</th>
       <th>Github</th>
       <th>Ghe</th>
@@ -20,12 +20,12 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.employee_number %></td>
-        <td><%= user.company_email %></td>
-        <td><%= user.private_email %></td>
         <td><%= user.name %></td>
-        <td><%= user.name_kana %></td>
-        <td><%= user.nickname %></td>
+        <td><%= user.email %></td>
+        <td><%= user.employee_number %></td>
+        <td><%= user.screen_name %></td>
+        <td><%= user.screen_name_kana %></td>
+        <td><%= user.chat_id %></td>
         <td><%= user.twitter_id %></td>
         <td><%= user.github_id %></td>
         <td><%= user.ghe_id %></td>

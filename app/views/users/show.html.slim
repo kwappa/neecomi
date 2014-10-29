@@ -1,0 +1,45 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @user.name
+p
+  strong
+    | Email:
+  = @user.email
+p
+  strong
+    | Employee number:
+  = @user.employee_number
+p
+  strong
+    | Screen Name:
+  = @user.screen_name
+p
+  strong
+    | Screen Name kana:
+  = @user.screen_name_kana
+p
+  strong
+    | Chat:
+  = @user.chat_id
+p
+  strong
+    | Twitter:
+  = @user.twitter_id
+p
+  strong
+    | Github:
+  = @user.github_id
+p
+  strong
+    | Ghe:
+  = @user.ghe_id
+p
+  strong
+    | Phone number:
+  = @user.phone_number
+= link_to 'Edit', edit_user_path(@user)
+|  | 
+= link_to 'Back', users_path

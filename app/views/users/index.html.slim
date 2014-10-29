@@ -1,0 +1,57 @@
+h1
+  | Listing users
+table
+  thead
+    tr
+      th
+        | Name
+      th
+        | Email
+      th
+        | Emlployee Number
+      th
+        | Screen Name
+      th
+        | Screen Name kana
+      th
+        | Chat
+      th
+        | Twitter
+      th
+        | Github
+      th
+        | Ghe
+      th
+        | Phone number
+      th[colspan="3"]
+  tbody
+    - @users.each do |user|
+      tr
+        td
+          = user.name
+        td
+          = user.email
+        td
+          = user.employee_number
+        td
+          = user.screen_name
+        td
+          = user.screen_name_kana
+        td
+          = user.chat_id
+        td
+          = user.twitter_id
+        td
+          = user.github_id
+        td
+          = user.ghe_id
+        td
+          = user.phone_number
+        td
+          = link_to 'Show', user
+        td
+          = link_to 'Edit', edit_user_path(user)
+        td
+          = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New User', new_user_path

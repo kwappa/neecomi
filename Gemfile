@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 gem 'slim-rails', '~> 2.1.5'
+gem 'bcrypt-ruby', '~> 3.1.5'
 
 group :development do
   gem 'rack-mini-profiler', require: false

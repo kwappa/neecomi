@@ -23,9 +23,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    # FIXME
-    @user.password_digest = 'dummy'
-
     if @user.save
       redirect_to @user, notice: 'User was successfully created.'
     else
@@ -67,7 +64,9 @@ class UsersController < ApplicationController
       :github_id,
       :ghe_id,
       :phone_number,
-      :email_confirmed_at
+      :email_confirmed_at,
+      :password,
+      :password_confirmation
     )
   end
 end

@@ -21,3 +21,7 @@ group :develoment, :test do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.0.1'
 end
+
+group :test do
+  gem 'database_rewinder'
+end

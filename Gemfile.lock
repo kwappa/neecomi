@@ -40,6 +40,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    database_rewinder (0.4.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -142,6 +143,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.1.5)
   coffee-rails (~> 4.0.0)
+  database_rewinder
   jquery-rails
   pry
   pry-rails

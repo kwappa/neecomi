@@ -30,9 +30,24 @@ RSpec.describe User, type: :model do
           let(:attr) { user_attributes.merge(name: 'with blank') }
           it { expect(user).to_not be_valid }
         end
+
         context 'when non-ASCII' do
           let(:attr) { user_attributes.merge(name: '煮込み太郎') }
           it { expect(user).to_not be_valid }
+        end
+      end
+
+      context 'when duplicated' do
+        before { User.create!(user_attributes) }
+
+        context 'when case sencitive' do
+          let(:attr) { user_attributes }
+          it { expect(user).to_not be_valid }
+        end
+
+        context 'when case inssencitive' do
+          let(:attr) { user_attributes.merge(name: user_attributes[:name].upcase) }
+          it { expect(user).to be_valid }
         end
       end
     end

@@ -50,6 +50,16 @@ RSpec.describe User, type: :model do
           it { expect(user).to be_valid }
         end
       end
+
+      context 'when too short' do
+        let(:attr) { user_attributes.merge(name: 's' ) }
+        it { expect(user).to_not be_valid }
+      end
+
+      context 'when too long' do
+        let(:attr) { user_attributes.merge(name: 's' * 241 ) }
+        it { expect(user).to_not be_valid }
+      end
     end
   end
 end

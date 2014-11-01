@@ -6,5 +6,11 @@ class User < ActiveRecord::Base
             length: { minimum: 3, maximum: 240 }
            )
 
+  validates(:email,
+           presence: true,
+           uniqueness: { case_sensitive: false },
+           email_format: true
+          )
+
   has_secure_password
 end

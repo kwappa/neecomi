@@ -46,7 +46,12 @@ RSpec.describe User, type: :model do
         end
 
         context 'when case inssencitive' do
-          let(:attr) { user_attributes.merge(name: user_attributes[:name].upcase) }
+          let(:attr) do
+            user_attributes.merge(
+              name: user_attributes[:name].upcase,
+              email: 'other_dummy_user@example.com',
+            )
+          end
           it { expect(user).to be_valid }
         end
       end
@@ -58,6 +63,32 @@ RSpec.describe User, type: :model do
 
       context 'when too long' do
         let(:attr) { user_attributes.merge(name: 's' * 241 ) }
+        it { expect(user).to_not be_valid }
+      end
+    end
+
+    describe 'email' do
+      context 'when blank' do
+        let(:attr) { user_attributes.merge(email: nil) }
+        it { expect(user).to_not be_valid }
+      end
+
+      context 'when duplicated' do
+        before { User.create!(user_attributes) }
+
+        context 'when case sencitive' do
+          let(:attr) { user_attributes }
+          it { expect(user).to_not be_valid }
+        end
+
+        context 'when case inssencitive' do
+          let(:attr) { user_attributes.merge(email: user_attributes[:email].upcase) }
+          it { expect(user).to_not be_valid }
+        end
+      end
+
+      context 'when invalid format' do
+        let(:attr) { user_attributes.merge(email: 'INVALID_EMAIL_FORMAT') }
         it { expect(user).to_not be_valid }
       end
     end

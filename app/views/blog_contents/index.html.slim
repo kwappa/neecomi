@@ -1,0 +1,29 @@
+h1 Listing blog_contents
+
+table
+  thead
+    tr
+      th User
+      th Title
+      th Body
+      th Published at
+      th Datetime
+      th
+      th
+      th
+
+  tbody
+    - @blog_contents.each do |blog_content|
+      tr
+        td = blog_content.user_id
+        td = blog_content.title
+        td = blog_content.body
+        td = blog_content.published_at
+        td = blog_content.datetime
+        td = link_to 'Show', blog_content
+        td = link_to 'Edit', edit_blog_content_path(blog_content)
+        td = link_to 'Destroy', blog_content, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Blog content', new_blog_content_path

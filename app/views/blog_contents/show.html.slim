@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong User:
+  = @blog_content.user_id
+p
+  strong Title:
+  = @blog_content.title
+p
+  strong Body:
+  = @blog_content.body
+p
+  strong Published at:
+  = @blog_content.published_at
+p
+  strong Datetime:
+  = @blog_content.datetime
+
+= link_to 'Edit', edit_blog_content_path(@blog_content)
+'|
+= link_to 'Back', blog_contents_path

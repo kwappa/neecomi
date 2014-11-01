@@ -1,0 +1,15 @@
+= form_for @blog_content do |f|
+  - if @blog_content.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@blog_content.errors.count, "error")} prohibited this blog_content from being saved:"
+      ul
+        - @blog_content.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :body
+    = f.text_area :body
+  .actions = f.submit 'Save'

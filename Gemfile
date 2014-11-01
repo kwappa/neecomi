@@ -9,6 +9,7 @@ gem 'jquery-rails'
 
 gem 'slim-rails', '~> 2.1.5'
 gem 'bcrypt-ruby', '~> 3.1.5'
+gem 'validates_email_format_of'
 
 group :development do
   gem 'rack-mini-profiler', require: false

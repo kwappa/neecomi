@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
             presence: true,
             format: /\A[a-zA-Z0-9_\-]+\Z/,
             uniqueness: true,
-            length: { minimum: 3, maximum: 240 }
+            length: { minimum: 3, maximum: 240 },
+            username_not_reserved: true
            )
 
   validates(:email,

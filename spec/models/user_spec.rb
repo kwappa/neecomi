@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
 
     describe 'name' do
       context 'when blank' do
-        let(:attr) { user_attributes.merge(name: nil) }
+        let(:attr) { user_attributes.merge(name: '') }
         it { expect(user).to_not be_valid }
       end
 
@@ -63,6 +63,11 @@ RSpec.describe User, type: :model do
 
       context 'when too long' do
         let(:attr) { user_attributes.merge(name: 's' * 241 ) }
+        it { expect(user).to_not be_valid }
+      end
+
+      context 'when reserved' do
+        let(:attr) { user_attributes.merge(name: 'index') }
         it { expect(user).to_not be_valid }
       end
     end

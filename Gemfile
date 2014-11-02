@@ -25,3 +25,5 @@ end
 group :test do
   gem 'database_rewinder'
 end
+
+gem 'username_not_reserved_validator'

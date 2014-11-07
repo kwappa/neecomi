@@ -8,7 +8,7 @@ RSpec.describe '/:user', type: :routing do
                               controller: 'blog_contents',
                               action: 'show',
                               user: 'routing_user',
-                              id: 'target_blog_id',
+                              slug: 'target_blog_id',
                             )
     end
   end

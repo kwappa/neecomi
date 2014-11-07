@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20141101185735) do
   create_table "blog_contents", force: true do |t|
     t.integer  "user_id"
     t.string   "title"
+    t.string   "slug"
     t.text     "body"
     t.datetime "published_at"
     t.datetime "created_at",   null: false
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(version: 20141101185735) do
   end
 
   add_index "blog_contents", ["published_at"], name: "index_blog_contents_on_published_at"
+  add_index "blog_contents", ["user_id", "slug"], name: "index_blog_contents_on_user_id_and_slug", unique: true
   add_index "blog_contents", ["user_id"], name: "index_blog_contents_on_user_id"
 
   create_table "users", force: true do |t|

@@ -1,4 +1,5 @@
 class BlogContentsController < ApplicationController
+  before_action :set_user
   before_action :set_blog_content, only: [:show, :edit, :update, :destroy]
 
   # GET /blog_contents
@@ -50,6 +51,10 @@ class BlogContentsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_blog_content
     @blog_content = BlogContent.find(params[:id])
+  end
+
+  def set_user
+    @user = User.find_by(name: params[:name]) || raise(Neecomi::Err::NotFound)
   end
 
   # Only allow a trusted parameter "white list" through.

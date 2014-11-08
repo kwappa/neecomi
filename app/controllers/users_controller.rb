@@ -56,14 +56,10 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :name,
       :email,
-      :employee_number,
+      :member_number,
       :screen_name,
       :screen_name_kana,
-      :chat_id,
-      :twitter_id,
-      :github_id,
-      :ghe_id,
-      :phone_number,
+      :nick,
       :email_confirmed_at,
       :password,
       :password_confirmation

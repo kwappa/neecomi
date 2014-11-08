@@ -10,8 +10,8 @@ p
   = @user.email
 p
   strong
-    | Employee number:
-  = @user.employee_number
+    | Member number:
+  = @user.member_number
 p
   strong
     | Screen Name:
@@ -22,24 +22,8 @@ p
   = @user.screen_name_kana
 p
   strong
-    | Chat:
-  = @user.chat_id
-p
-  strong
-    | Twitter:
-  = @user.twitter_id
-p
-  strong
-    | Github:
-  = @user.github_id
-p
-  strong
-    | Ghe:
-  = @user.ghe_id
-p
-  strong
-    | Phone number:
-  = @user.phone_number
+    | Nick
+  = @user.nick
 = link_to 'Edit', edit_user_path(@user)
 |  | 
 = link_to 'Back', users_path

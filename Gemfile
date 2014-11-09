@@ -9,21 +9,19 @@ gem 'jquery-rails'
 
 gem 'slim-rails', '~> 2.1.5'
 gem 'bcrypt-ruby', '~> 3.1.5'
-gem 'validates_email_format_of'
+gem 'validates_email_format_of', '~> 1.6.1'
+gem 'username_not_reserved_validator', '~> 1.0.0'
 
 group :development do
   gem 'rack-mini-profiler', require: false
   gem 'spring'
+  gem 'pry-rails'
 end
 
 group :develoment, :test do
-  gem 'pry'
-  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.0.1'
 end
 
 group :test do
   gem 'database_rewinder'
 end
-
-gem 'username_not_reserved_validator'

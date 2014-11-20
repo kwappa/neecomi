@@ -1,29 +1,56 @@
-p#notice
-  = notice
-p
-  strong
-    | Name:
-  = @user.name
-p
-  strong
-    | Email:
-  = @user.email
-p
-  strong
-    | Member number:
-  = @user.member_number
-p
-  strong
-    | Screen Name:
-  = @user.screen_name
-p
-  strong
-    | Screen Name kana:
-  = @user.screen_name_kana
-p
-  strong
-    | Nick
-  = @user.nick
-= link_to 'Edit', edit_user_path(@user)
-|  | 
-= link_to 'Back', users_path
+= content_for :header do
+  meta name='viewport' content='width=device-width, initial-scale=1.0'
+  = stylesheet_link_tag 'http://yui.yahooapis.com/pure//grids-responsive.css'
+  = stylesheet_link_tag 'users'
+
+div id='layout' class='pure-g'
+  div class='sidebar pure-u-1 pure-u-md-1-4'
+    div class='header'
+      h1 class='brand-title'
+        = @user.name
+      h2 class='brand-tagline'
+        = @user.email
+      nav class='nav'
+        ul class='nav-list'
+          li class='nav-item'
+            | foo
+  div class='content pure-u-1 pure-u-md-3-4'
+    div
+      div class='posts'
+        h1 class='content-subhead'
+          | content-subhead
+        section class='post'
+          header class='post-header'
+            h2 class='post-title'
+              | post-title
+            p class='post-meta'
+          div class='post-description'
+            p#notice
+              = notice
+            p
+              strong
+                | Name:
+              = @user.name
+            p
+              strong
+                | Email:
+              = @user.email
+            p
+              strong
+                | Member number:
+              = @user.member_number
+            p
+              strong
+                | Screen Name:
+              = @user.screen_name
+            p
+              strong
+                | Screen Name kana:
+              = @user.screen_name_kana
+            p
+              strong
+                | Nick
+              = @user.nick
+            = link_to 'Edit', edit_user_path(@user)
+            |  | 
+            = link_to 'Back', users_path

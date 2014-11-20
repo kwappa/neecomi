@@ -4,5 +4,6 @@ html
     title
       | Neecomi
     = csrf_meta_tags
+    = yield :header
   body
     = yield

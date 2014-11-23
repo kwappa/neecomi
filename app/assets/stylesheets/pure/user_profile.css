@@ -170,3 +170,7 @@ h3 {
         bottom: 0;
     }
 }
+
+.gravatar_icon {
+    border-radius: 8px;
+}

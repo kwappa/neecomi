@@ -1,9 +1,9 @@
 module Renderable
   def renderer
-    @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    @renderer ||= ::Qiita::Markdown::Processor.new
   end
 
   def render(field)
-    renderer.render(self.send(field))
+    renderer.call(self.send(field))[:output].to_s
   end
 end

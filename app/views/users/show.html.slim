@@ -53,6 +53,10 @@ div id='layout' class='pure-g'
               strong
                 | Nick
               = @user.nick
+            p
+              strong
+                | Profile
+              = @user.profile
             = link_to 'Edit', edit_user_path(@user)
             |  | 
             = link_to 'Back', users_path

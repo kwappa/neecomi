@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :screen_name
       t.string :screen_name_kana
       t.string :nick
+      t.text   :profile
       t.datetime :email_confirmed_at
 
       t.timestamps null: false

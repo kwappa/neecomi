@@ -62,6 +62,7 @@ class UsersController < ApplicationController
       :screen_name,
       :screen_name_kana,
       :nick,
+      :profile,
       :email_confirmed_at,
       :password,
       :password_confirmation

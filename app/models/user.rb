@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Renderable
+
   validates(:name,
             presence: true,
             format: /\A[a-zA-Z0-9_\-]+\Z/,

@@ -74,12 +74,16 @@ GEM
       mini_portile (~> 0.6.0)
     nokogumbo (1.1.12)
       nokogiri
+    posix-spawn (0.3.9)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    pygments.rb (0.6.0)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
     qiita-markdown (0.1.5)
       activesupport
       gemoji
@@ -171,6 +175,7 @@ GEM
       activemodel
     validates_email_format_of (1.6.1)
       i18n
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -181,6 +186,7 @@ DEPENDENCIES
   database_rewinder
   jquery-rails
   pry-rails
+  pygments.rb
   qiita-markdown
   rack-mini-profiler
   rails (= 4.1.7)

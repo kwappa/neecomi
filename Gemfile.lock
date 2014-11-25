@@ -32,6 +32,7 @@ GEM
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
     builder (3.2.2)
+    charlock_holmes (0.7.3)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -40,11 +41,22 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    crass (0.2.1)
     database_rewinder (0.4.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    escape_utils (1.0.1)
     execjs (2.2.2)
+    gemoji (2.1.0)
+    github-linguist (4.0.3)
+      charlock_holmes (~> 0.7.3)
+      escape_utils (~> 1.0.1)
+      mime-types (>= 1.19)
+      rugged (~> 0.22.0b1)
     hike (1.2.3)
+    html-pipeline (1.11.0)
+      activesupport (>= 2)
+      nokogiri (~> 1.4)
     i18n (0.6.11)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
@@ -52,16 +64,31 @@ GEM
     json (1.8.1)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mem (0.1.5)
     method_source (0.8.2)
     mime-types (2.4.3)
+    mini_portile (0.6.1)
     minitest (5.4.2)
     multi_json (1.10.1)
+    nokogiri (1.6.4.1)
+      mini_portile (~> 0.6.0)
+    nokogumbo (1.1.12)
+      nokogiri
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    qiita-markdown (0.1.5)
+      activesupport
+      gemoji
+      github-linguist
+      html-pipeline
+      mem
+      redcarpet
+      rugged (>= 0.21.1b2)
+      sanitize
     rack (1.5.2)
     rack-mini-profiler (0.9.2)
       rack (>= 1.1.3)
@@ -100,6 +127,11 @@ GEM
       rspec-mocks (~> 3.0.0)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
+    rugged (0.22.0b4)
+    sanitize (3.0.3)
+      crass (~> 0.2.0)
+      nokogiri (>= 1.4.4)
+      nokogumbo (= 1.1.12)
     sass (3.2.19)
     sass-rails (4.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -149,9 +181,9 @@ DEPENDENCIES
   database_rewinder
   jquery-rails
   pry-rails
+  qiita-markdown
   rack-mini-profiler
   rails (= 4.1.7)
-  redcarpet (~> 3.2.0)
   rspec-rails (~> 3.0.1)
   sass-rails (~> 4.0.3)
   slim-rails (~> 2.1.5)

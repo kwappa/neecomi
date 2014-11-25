@@ -11,7 +11,7 @@ gem 'slim-rails', '~> 2.1.5'
 gem 'bcrypt-ruby', '~> 3.1.5'
 gem 'validates_email_format_of', '~> 1.6.1'
 gem 'username_not_reserved_validator', '~> 1.0.0'
-gem 'redcarpet', '~> 3.2.0'
+gem 'qiita-markdown'
 
 group :development do
   gem 'rack-mini-profiler', require: false

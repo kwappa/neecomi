@@ -68,7 +68,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.4.3)
     mini_portile (0.6.1)
-    minitest (5.4.2)
+    minitest (5.4.3)
     multi_json (1.10.1)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
@@ -84,12 +84,13 @@ GEM
     pygments.rb (0.6.0)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
-    qiita-markdown (0.1.5)
+    qiita-markdown (0.1.6)
       activesupport
       gemoji
       github-linguist
       html-pipeline
       mem
+      pygments.rb
       redcarpet
       rugged (>= 0.21.1b2)
       sanitize
@@ -113,8 +114,8 @@ GEM
       activesupport (= 4.1.7)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.3.2)
-    redcarpet (3.2.0)
+    rake (10.4.0)
+    redcarpet (3.2.1)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -137,10 +138,10 @@ GEM
       nokogiri (>= 1.4.4)
       nokogumbo (= 1.1.12)
     sass (3.2.19)
-    sass-rails (4.0.4)
+    sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2.2)
-      sprockets (~> 2.8, < 2.12)
+      sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
     slim (2.1.0)
       temple (~> 0.6.9)
@@ -151,13 +152,13 @@ GEM
       railties (>= 3.0, < 4.2)
       slim (~> 2.0)
     slop (3.6.0)
-    spring (1.1.3)
-    sprockets (2.11.3)
+    spring (1.2.0)
+    sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.2.0)
+    sprockets-rails (2.2.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
@@ -186,8 +187,7 @@ DEPENDENCIES
   database_rewinder
   jquery-rails
   pry-rails
-  pygments.rb
-  qiita-markdown
+  qiita-markdown (~> 0.1.6)
   rack-mini-profiler
   rails (= 4.1.7)
   rspec-rails (~> 3.0.1)

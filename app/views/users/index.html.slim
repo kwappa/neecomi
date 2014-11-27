@@ -8,21 +8,15 @@ table
       th
         | Email
       th
-        | Emlployee Number
+        | Member Number
       th
         | Screen Name
       th
         | Screen Name kana
       th
-        | Chat
+        | Nick
       th
-        | Twitter
-      th
-        | Github
-      th
-        | Ghe
-      th
-        | Phone number
+        | Profile
       th[colspan="3"]
   tbody
     - @users.each do |user|
@@ -32,21 +26,15 @@ table
         td
           = user.email
         td
-          = user.employee_number
+          = user.member_number
         td
           = user.screen_name
         td
           = user.screen_name_kana
         td
-          = user.chat_id
+          = user.nick
         td
-          = user.twitter_id
-        td
-          = user.github_id
-        td
-          = user.ghe_id
-        td
-          = user.phone_number
+          = user.profile
         td
           = link_to 'Show', user
         td

@@ -5,8 +5,9 @@ RSpec.describe User, type: :model do
     {
       name: 'dummy_user',
       email: 'dummy_user@example.com',
-      password_digest: 'x' * 32,
-    }
+      password: 'password',
+      password_confirmation: 'password',
+   }
   end
 
   let(:user) { described_class.new(user_attributes) }

@@ -60,6 +60,7 @@ GEM
       escape_utils (~> 1.0.1)
       mime-types (>= 1.19)
       rugged (~> 0.22.0b1)
+    hashie (3.3.2)
     hike (1.2.3)
     html-pipeline (1.11.0)
       activesupport (>= 2)
@@ -81,6 +82,9 @@ GEM
       mini_portile (~> 0.6.0)
     nokogumbo (1.1.12)
       nokogiri
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
+      rack (~> 1.0)
     orm_adapter (0.5.0)
     posix-spawn (0.3.9)
     pry (0.10.1)
@@ -199,6 +203,7 @@ DEPENDENCIES
   database_rewinder
   devise (~> 3.4.1)
   jquery-rails
+  omniauth
   pry-rails
   qiita-markdown (~> 0.1.6)
   rack-mini-profiler

@@ -13,6 +13,7 @@ gem 'validates_email_format_of', '~> 1.6.1'
 gem 'username_not_reserved_validator', '~> 1.0.0'
 gem 'qiita-markdown', '~> 0.1.6'
 gem 'devise', '~> 3.4.1'
+gem 'omniauth'
 
 group :development do
   gem 'rack-mini-profiler', require: false

@@ -28,21 +28,24 @@ ActiveRecord::Schema.define(version: 20141101185735) do
   add_index "blog_contents", ["user_id"], name: "index_blog_contents_on_user_id"
 
   create_table "users", force: true do |t|
-    t.string   "name",               null: false
-    t.string   "email",              null: false
-    t.string   "password_digest",    null: false
+    t.string   "name",                   null: false
+    t.string   "email",                  null: false
+    t.string   "encrypted_password",     null: false
     t.string   "member_number"
     t.string   "screen_name"
     t.string   "screen_name_kana"
     t.string   "nick"
     t.text     "profile"
-    t.datetime "email_confirmed_at"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["member_number"], name: "index_users_on_member_number", unique: true
   add_index "users", ["name"], name: "index_users_on_name", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

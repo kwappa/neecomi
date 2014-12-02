@@ -43,6 +43,13 @@ GEM
     coffee-script-source (1.8.0)
     crass (0.2.1)
     database_rewinder (0.4.1)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     escape_utils (1.0.1)
@@ -74,6 +81,7 @@ GEM
       mini_portile (~> 0.6.0)
     nokogumbo (1.1.12)
       nokogiri
+    orm_adapter (0.5.0)
     posix-spawn (0.3.9)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -116,6 +124,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.0)
     redcarpet (3.2.1)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -176,6 +186,8 @@ GEM
       activemodel
     validates_email_format_of (1.6.1)
       i18n
+    warden (1.2.3)
+      rack (>= 1.0)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -185,6 +197,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.1.5)
   coffee-rails (~> 4.0.0)
   database_rewinder
+  devise (~> 3.4.1)
   jquery-rails
   pry-rails
   qiita-markdown (~> 0.1.6)

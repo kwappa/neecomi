@@ -203,7 +203,7 @@ DEPENDENCIES
   database_rewinder
   devise (~> 3.4.1)
   jquery-rails
-  omniauth
+  omniauth (~> 1.2.2)
   pry-rails
   qiita-markdown (~> 0.1.6)
   rack-mini-profiler

@@ -62,9 +62,12 @@ GEM
       rugged (~> 0.22.0b1)
     hashie (3.3.2)
     hike (1.2.3)
+    hpricot (0.8.6)
     html-pipeline (1.11.0)
       activesupport (>= 2)
       nokogiri (~> 1.4)
+    html2slim (0.1.0)
+      hpricot
     i18n (0.6.11)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
@@ -202,6 +205,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_rewinder
   devise (~> 3.4.1)
+  html2slim
   jquery-rails
   omniauth (~> 1.2.2)
   pry-rails

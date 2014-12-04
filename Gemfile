@@ -19,6 +19,7 @@ group :development do
   gem 'rack-mini-profiler', require: false
   gem 'spring'
   gem 'pry-rails'
+  gem 'html2slim'
 end
 
 group :development, :test do

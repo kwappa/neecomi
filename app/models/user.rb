@@ -11,10 +11,4 @@ class User < ActiveRecord::Base
             length: { minimum: 3, maximum: 240 },
             username_not_reserved: true
            )
-
-  validates(:email,
-           presence: true,
-           uniqueness: { case_sensitive: false },
-           email_format: true
-          )
 end

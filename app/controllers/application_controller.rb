@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     PERMITED_COLUMNS_FOR_USER.each do |column|
       devise_parameter_sanitizer.for(:sign_up) << column
       devise_parameter_sanitizer.for(:sign_in) << column
+      devise_parameter_sanitizer.for(:account_update) << column
     end
   end
 

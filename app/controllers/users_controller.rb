@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:show]
+  before_action :authenticate_user!, only: [:show, :after_edit]
 
   def sign_out
     if user_signed_in?
@@ -11,5 +11,9 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+  end
+
+  def after_edit
+    redirect_to "/#{current_user.name}"
   end
 end

@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable, :omniauthable
+
   include Renderable
 
   validates(:name,
@@ -8,12 +11,4 @@ class User < ActiveRecord::Base
             length: { minimum: 3, maximum: 240 },
             username_not_reserved: true
            )
-
-  validates(:email,
-           presence: true,
-           uniqueness: { case_sensitive: false },
-           email_format: true
-          )
-
-  has_secure_password
 end

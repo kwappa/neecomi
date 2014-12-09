@@ -9,14 +9,16 @@ gem 'jquery-rails'
 
 gem 'slim-rails', '~> 2.1.5'
 gem 'bcrypt-ruby', '~> 3.1.5'
-gem 'validates_email_format_of', '~> 1.6.1'
 gem 'username_not_reserved_validator', '~> 1.0.0'
 gem 'qiita-markdown', '~> 0.1.6'
+gem 'devise', '~> 3.4.1'
+gem 'omniauth', '~> 1.2.2'
 
 group :development do
   gem 'rack-mini-profiler', require: false
   gem 'spring'
   gem 'pry-rails'
+  gem 'html2slim'
 end
 
 group :development, :test do

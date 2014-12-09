@@ -6,4 +6,9 @@ html
     = csrf_meta_tags
     = yield :header
   body
+    div class="flash_message"
+      p class="notice"
+        = notice
+      p class="alert"
+        = alert
     = yield
